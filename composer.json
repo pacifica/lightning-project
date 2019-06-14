@@ -5,8 +5,10 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "acquia/lightning": "^4.0",
+        "drupal/pacifica": "dev-8.x-1.x",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal-composer/drupal-scaffold": "^2.0.0"
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "drupal/memcache": "^2.0"
     },
     "require-dev": {
         "drush/drush": "^9.0"

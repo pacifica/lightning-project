@@ -1,0 +1,27 @@
+version: '3'
+services:
+  drupaldb:
+    image: mariadb:latest
+    environment:
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: drupal
+  drupalsolr:
+    image: solr
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - d8
+  drupal:
+    build:
+      context: .
+    ports:
+      - "2222:22"
+      - "8080:80"
+    links:
+      - drupaldb
+      - drupalsolr
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
