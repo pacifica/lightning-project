@@ -11,3 +11,5 @@
 
 # Ignore Composer-managed dependencies.
 vendor/
+
+scripts/docker/authorized_keys

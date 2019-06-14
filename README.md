@@ -1,9 +1,11 @@
 This is a Composer-based installer for the [Lightning](https://www.drupal.org/project/lightning) Drupal distribution. Welcome to the future!
 
+This was forked to Pacifica to support user interface development for Pacifica services.
+
 ## Get Started
 
 ```
-$ composer create-project acquia/lightning-project MY_PROJECT
+$ composer create-project pacifica/lightning-project MY_PROJECT
 $ cd MY_PROJECT && composer quick-start
 ```
 
@@ -18,7 +20,7 @@ hosting environments, so if you need to, you can tell Composer to install
 dependencies into `docroot/vendor` instead:
 
 ```
-$ composer create-project acquia/lightning-project MY_PROJECT --no-install
+$ composer create-project pacifica/lightning-project MY_PROJECT --no-install
 $ composer config vendor-dir docroot/vendor
 $ cd MY_PROJECT
 $ composer install
